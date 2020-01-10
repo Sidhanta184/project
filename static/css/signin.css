@@ -1,0 +1,86 @@
+.fullscreen_bg {
+	 position: fixed;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 background-size: cover;
+	 background-position: 50% 50%;
+   background-image: url('image.jpg');
+	 background-repeat:repeat;
+ }
+
+.pat{
+	color:green;
+	padding-left: 400px;
+	font-size: 26px;
+}
+
+input[type=text]{
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  border: 2px outset lightblue;
+  margin-left: 15px;
+}
+
+input[type=number]{
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  border: 2px outset lightblue;
+  margin-left: 15px;
+}
+
+input[type=date]{
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  border: 2px outset lightblue;
+  margin-right: 15px;
+}
+
+input[type=radio]{
+	margin-top: 12px;
+	margin-left: 12px;
+}
+
+.control-label{
+	text-decoration-color:red;
+}
+.name{
+	color:gray;
+}
+.fem{
+	margin-right: 23px;
+}
+.find{
+	margin-left: 230px;
+}
+.ser{
+	border-radius: 5px;
+	color: white;
+	background-color: lightblue;
+
+}
+button[type=button]{
+	background-color: lightblue;
+	border-radius: 5px;
+	width: 70px;
+	margin-top: 3px;
+}
+.gen{
+	margin-left:8px;
+}
+
+.log{
+	margin-top: 26px;
+	color: red;
+}
+.btn{
+	font-size: 23px;
+	padding-right: 32px;
+}
+.Search{
+	font-color: black;
+}
