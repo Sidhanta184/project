@@ -1,0 +1,155 @@
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Patient Registration</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/signin.css' %}" rel="stylesheet">
+
+  </head>
+  <body>
+    <div style ="background-image: url('{% static "image/image.jpg" %}');">
+
+        <div class="container">
+     <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-12">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <div class="panel-title"><span class="pat">Patient's Registration Form</span>
+                                <button class="btn  pull-right" type="submit" name="submit">Logout</button></div>
+
+                            </div>
+                            <div class="panel-body" >
+                                <form id="signupform" class="form-horizontal" role="form" method="POST" action="{% url 'patients' %}" >
+
+
+
+                                    <div id="signupalert" style="display:none" class="alert alert-danger">
+                                        <p>Error:</p>
+                                        <span></span>
+                                    </div>
+
+
+
+                                    {% csrf_token %}
+
+                                    <div class="form-group">
+                                        <label for="name" class="col-md-3 control-label name">ID:</label>
+                                        <div class="col-md">
+                                            <input type="number" class="form-control" id="Id" autocomplete="off">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="name" class="col-md-3 control-label name">Date:</label>
+                                        <div class="col-md">
+                                        </div>
+                                        <input type="date" class="form-control" name="firstname" id="date"   placeholder="Full Name" autocomplete="off"  >
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="name" class="col-md-3 control-label name">Name of Patient:</label>
+                                        <div class="col-md">
+                                        </div>
+                                        <input type="text" class="form-control" name="firstname" id="user"   placeholder="Full Name" autocomplete="off" required maxlength="" >
+                                    </div>
+
+
+                               <div class="form-group">
+                                        <label for="name" class="col-md-3 control-label name">Gender:</label>
+                                          <div class = "col-md gen">
+    				                              <input type="radio" name="gender"  id="gender" value="boy">Male</input>
+    				                              <input type="radio"  name="gender" id="gender" value="girl">Female</input>
+                                          </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="firstname" class="col-md-3 control-label name">Age:</label>
+                                        <div class="col-md">
+                                        </div>
+                                        <input type="number" class="form-control" id="age" autocomplete="off" required min =1 max=100 >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="name" class="col-md-3 control-label name">Address:</label>
+                                        <div class="col-md">
+                                            <input type="text" class="form-control" id="address" autocomplete="off" required>
+                                        </div>
+                                    </div>
+
+                                   <div class="form-group">
+                                        <label for="name" class="col-md-3 control-label name">Contact No:</label>
+                                        <div class="col-md">
+                                            <input type="number" class="form-control" id="contact" autocomplete="off" required maxlength="10">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                            <label for="name" class="col-md-3 control-label name">Problems:</label>
+                                            <div class="col-md">
+                                                <input type="text" class="form-control" id="problem"  autocomplete="off" >
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                                <label for="name" class="col-md-3 control-label name ">Duration of Problem:</label>
+                                                <div class="col-md">
+                                                    <input type="number" class="form-control" id="time" autocomplete="off" >
+                                                </div>
+                                            </div>
+
+
+
+
+
+                                    <div class="form-group">
+                                        <!-- Button -->
+                                        <div class="col-md-offset-3 col-md-3 ">
+                                            <button id="btn-signup" type="submit" class="btn btn-info btn-lg "><i class="icon-hand-right"></i>Submit</button>
+
+                                        </div>
+                                    </div>
+
+
+
+
+                                </form>
+                             </div>
+                        </div>
+    </div>
+    </div>
+    <div class="container">
+    <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title"><span class="pat">Patient's information</span></div>
+
+                        </div>
+                        <div class="panel-body" >
+                            <form id="signupform" class="form-horizontal" role="form">
+
+                                <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Error:</p>
+                                    <span></span>
+                                </div>
+
+
+
+             </div>
+            <div class="search">
+              <center><form class="" action="#" method="post">
+                <input type="number" name="" value="">
+                <button type="button" name="button"> <span class="ser">search</span></button>
+
+              </form></center>
+            </div>
+    </div>
+             </div>
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+             <!-- Include all compiled plugins (below), or include individual files as needed -->
+             <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
+
+</html>
